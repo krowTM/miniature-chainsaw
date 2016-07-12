@@ -24,10 +24,10 @@ class FormSubmitRequest extends Request
     public function rules()
     {
         return [
-        	'company_symbol' => 'required|valid_company_symbol',
-        	'start_date' => 'required|date',
-        	'end_date' => 'required|date|after:start_date',
-        	'email' => 'required|email',
+            'company_symbol' => 'required|valid_company_symbol',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date|after:start_date',
+            'email' => 'required|email',
         ];
     }
 }

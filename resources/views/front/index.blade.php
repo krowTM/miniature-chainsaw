@@ -14,7 +14,7 @@
         </div>
     </body>
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-	<script type="text/javascript" src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <script type="text/javascript" src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
 </html>

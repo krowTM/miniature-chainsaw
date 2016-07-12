@@ -39,41 +39,41 @@
         </div>
     </body>
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-	<script type="text/javascript" src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-	<script>
-	$(function(){
-	    var dateFormat = "yy-mm-dd";
-	    start = $("#start_date").datepicker({
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <script type="text/javascript" src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <script>
+    $(function(){
+        var dateFormat = "yy-mm-dd";
+        start = $("#start_date").datepicker({
             defaultDate: "+1w",
             changeMonth: true,
             numberOfMonths: 1,
             dateFormat: dateFormat
-		}).on("change", function() {
-			end.datepicker("option", "minDate", getDate(this));
-		});
-	    end = $("#end_date").datepicker({
+    	}).on("change", function() {
+    		end.datepicker("option", "minDate", getDate(this));
+    	});
+        end = $("#end_date").datepicker({
             defaultDate: "+1w",
             changeMonth: true,
             numberOfMonths: 1,
             dateFormat: dateFormat
-		}).on("change", function() {
-			start.datepicker("option", "maxDate", getDate(this));
-		});
-
-		function getDate(e) {
-			var date;
-			try {
-				date = $.datepicker.parseDate(dateFormat, e.value);
-			} catch( error ) {
-		        date = null;
-			}
-
-			return date;
-		}
-	});
-	</script>
+    	}).on("change", function() {
+    		start.datepicker("option", "maxDate", getDate(this));
+    	});
+    
+    	function getDate(e) {
+    		var date;
+    		try {
+    			date = $.datepicker.parseDate(dateFormat, e.value);
+    		} catch( error ) {
+    	        date = null;
+    		}
+    
+    		return date;
+    	}
+    });
+    </script>
 </html>

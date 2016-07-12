@@ -13,7 +13,7 @@ use App\Jobs\SendEmail;
 
 class FrontController extends Controller
 {
-	private $csv_data = array();
+    private $csv_data = array();
 	
     public function index() 
     {
