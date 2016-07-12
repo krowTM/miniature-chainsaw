@@ -9,6 +9,7 @@ use App\Jobs\DownloadCompanySymbols;
 use App\Http\Requests\FormSubmitRequest;
 use Illuminate\Support\Facades\Storage;
 use App\Jobs\DownloadDataForCompany;
+use App\Jobs\SendEmail;
 
 class FrontController extends Controller
 {
@@ -36,7 +37,7 @@ class FrontController extends Controller
     	
         $this->getValidRows($start_date, $end_date, $data_filename);
         
-        $this->dispatch(new SendEmail($start_date, $end_date, $data_filename, $company_symbol));
+        $this->dispatch(new SendEmail($start_date, $end_date, $company_symbol, $email));
     	
         return view(
             "ajax.data_table", 
