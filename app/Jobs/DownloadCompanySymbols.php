@@ -54,7 +54,7 @@ class DownloadCompanySymbols extends Job implements ShouldQueue
     private function writeProgress($message)
     {
         file_put_contents(
-            public_path() . '/progress.json', json_encode($message)
+            public_path() . '/progress/progress.json', json_encode($message)
         );
     }
     

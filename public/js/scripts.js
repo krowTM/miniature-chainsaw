@@ -4,7 +4,7 @@ var Setup = {
 	},
 	checkProgress: function() {
 		var runInterval = setInterval(function() {
-			$.getJSON("progress.json?" + (Math.random(10000000) * 10000000 + 1), function(json) {
+			$.getJSON("progress/progress.json?" + (Math.random(10000000) * 10000000 + 1), function(json) {
 				console.log(json);
 				$(".progress").html(json);
 				if (json == "Done.") {
